@@ -1,0 +1,14 @@
+{
+    "person":[
+    {
+        "name":"name1",
+        "age":"35",
+        "place":"Bangalore"
+    },
+    {
+        "name":"name2",
+        "age":"36",
+        "place":"Mangalore"
+    }
+    ]
+}

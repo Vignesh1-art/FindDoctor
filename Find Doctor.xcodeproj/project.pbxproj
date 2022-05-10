@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */; };
+		BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */; };
+		BD1FE4B0282A3F92003578F6 /* DoctorsData.json in Resources */ = {isa = PBXBuildFile; fileRef = BD1FE4AF282A3F92003578F6 /* DoctorsData.json */; };
+		BD1FE4B4282A4437003578F6 /* SearchResultDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */; };
+		BDA99D54282938F900086E9C /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* JsonReader.swift */; };
+		BDA99D5628293C8B00086E9C /* TopDoctorData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDA99D5528293C8B00086E9C /* TopDoctorData.json */; };
+		BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670D2828D6E90004A80B /* AppDelegate.swift */; };
+		BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670F2828D6E90004A80B /* SceneDelegate.swift */; };
+		BDC667122828D6E90004A80B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC667112828D6E90004A80B /* MainViewController.swift */; };
+		BDC667152828D6E90004A80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC667132828D6E90004A80B /* Main.storyboard */; };
+		BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDC667162828D6E90004A80B /* Find_Doctor.xcdatamodeld */; };
+		BDC6671A2828D6EA0004A80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC667192828D6EA0004A80B /* Assets.xcassets */; };
+		BDC6671D2828D6EA0004A80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC6671B2828D6EA0004A80B /* LaunchScreen.storyboard */; };
+		BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */; };
+		BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDoctorsInfoCell.swift; sourceTree = "<group>"; };
+		BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCoreDataDB.swift; sourceTree = "<group>"; };
+		BD1FE4AF282A3F92003578F6 /* DoctorsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DoctorsData.json; sourceTree = "<group>"; };
+		BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDisplay.swift; sourceTree = "<group>"; };
+		BDA99D53282938F900086E9C /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		BDA99D5528293C8B00086E9C /* TopDoctorData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopDoctorData.json; sourceTree = "<group>"; };
+		BDC6670A2828D6E90004A80B /* Find Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Doctor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC6670D2828D6E90004A80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDC6670F2828D6E90004A80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDC667112828D6E90004A80B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BDC667142828D6E90004A80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDC667172828D6E90004A80B /* Find_Doctor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Find_Doctor.xcdatamodel; sourceTree = "<group>"; };
+		BDC667192828D6EA0004A80B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDC6671C2828D6EA0004A80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDC6671E2828D6EA0004A80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesSheetViewController.swift; sourceTree = "<group>"; };
+		BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDC667072828D6E90004A80B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD1FE4A8282A2BBE003578F6 /* DataLoaders */ = {
+			isa = PBXGroup;
+			children = (
+				BDA99D53282938F900086E9C /* JsonReader.swift */,
+			);
+			path = DataLoaders;
+			sourceTree = "<group>";
+		};
+		BD1FE4AB282A35C1003578F6 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */,
+				BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		BD1FE4AC282A35D2003578F6 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		BDA99D502829381C00086E9C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BDA99D5528293C8B00086E9C /* TopDoctorData.json */,
+				BD1FE4AF282A3F92003578F6 /* DoctorsData.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BDC667012828D6E90004A80B = {
+			isa = PBXGroup;
+			children = (
+				BD1FE4AC282A35D2003578F6 /* db */,
+				BD1FE4AB282A35C1003578F6 /* UIViews */,
+				BD1FE4A8282A2BBE003578F6 /* DataLoaders */,
+				BDA99D502829381C00086E9C /* Resource */,
+				BDC6670C2828D6E90004A80B /* Find Doctor */,
+				BDC6670B2828D6E90004A80B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDC6670B2828D6E90004A80B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDC6670A2828D6E90004A80B /* Find Doctor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDC6670C2828D6E90004A80B /* Find Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				BDC667252828D9FF0004A80B /* StoryBoards */,
+				BDC667242828D9AC0004A80B /* ViewControllers */,
+				BDC6670D2828D6E90004A80B /* AppDelegate.swift */,
+				BDC6670F2828D6E90004A80B /* SceneDelegate.swift */,
+				BDC667192828D6EA0004A80B /* Assets.xcassets */,
+				BDC6671E2828D6EA0004A80B /* Info.plist */,
+				BDC667162828D6E90004A80B /* Find_Doctor.xcdatamodeld */,
+			);
+			path = "Find Doctor";
+			sourceTree = "<group>";
+		};
+		BDC667242828D9AC0004A80B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC667112828D6E90004A80B /* MainViewController.swift */,
+				BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */,
+				BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDC667252828D9FF0004A80B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				BDC6671B2828D6EA0004A80B /* LaunchScreen.storyboard */,
+				BDC667132828D6E90004A80B /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDC667092828D6E90004A80B /* Find Doctor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC667212828D6EA0004A80B /* Build configuration list for PBXNativeTarget "Find Doctor" */;
+			buildPhases = (
+				BDC667062828D6E90004A80B /* Sources */,
+				BDC667072828D6E90004A80B /* Frameworks */,
+				BDC667082828D6E90004A80B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Find Doctor";
+			productName = "Find Doctor";
+			productReference = BDC6670A2828D6E90004A80B /* Find Doctor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDC667022828D6E90004A80B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					BDC667092828D6E90004A80B = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BDC667052828D6E90004A80B /* Build configuration list for PBXProject "Find Doctor" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDC667012828D6E90004A80B;
+			productRefGroup = BDC6670B2828D6E90004A80B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDC667092828D6E90004A80B /* Find Doctor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDC667082828D6E90004A80B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC6671D2828D6EA0004A80B /* LaunchScreen.storyboard in Resources */,
+				BDC6671A2828D6EA0004A80B /* Assets.xcassets in Resources */,
+				BDA99D5628293C8B00086E9C /* TopDoctorData.json in Resources */,
+				BDC667152828D6E90004A80B /* Main.storyboard in Resources */,
+				BD1FE4B0282A3F92003578F6 /* DoctorsData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDC667062828D6E90004A80B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */,
+				BD1FE4B4282A4437003578F6 /* SearchResultDisplay.swift in Sources */,
+				BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */,
+				BDC667122828D6E90004A80B /* MainViewController.swift in Sources */,
+				BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */,
+				BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */,
+				BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */,
+				BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */,
+				BDA99D54282938F900086E9C /* JsonReader.swift in Sources */,
+				BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDC667132828D6E90004A80B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC667142828D6E90004A80B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDC6671B2828D6EA0004A80B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC6671C2828D6EA0004A80B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDC6671F2828D6EA0004A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDC667202828D6EA0004A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDC667222828D6EA0004A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Find Doctor/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-Doctor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDC667232828D6EA0004A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Find Doctor/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-Doctor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDC667052828D6E90004A80B /* Build configuration list for PBXProject "Find Doctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC6671F2828D6EA0004A80B /* Debug */,
+				BDC667202828D6EA0004A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDC667212828D6EA0004A80B /* Build configuration list for PBXNativeTarget "Find Doctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC667222828D6EA0004A80B /* Debug */,
+				BDC667232828D6EA0004A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDC667162828D6E90004A80B /* Find_Doctor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDC667172828D6E90004A80B /* Find_Doctor.xcdatamodel */,
+			);
+			currentVersion = BDC667172828D6E90004A80B /* Find_Doctor.xcdatamodel */;
+			path = Find_Doctor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BDC667022828D6E90004A80B /* Project object */;
+}

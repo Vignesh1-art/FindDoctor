@@ -1,0 +1,43 @@
+{
+    "doctors":[
+    {
+        "name" : "Jhon Smith",
+        "specialization" : "Dentist",
+        "address" : "",
+        "yoe" : 32
+        
+    },
+    {
+        "name" : "Philippa Arnold",
+        "specialization" : "Ophthalmologist",
+        "address" : "",
+        "yoe" : 20
+    },
+    {
+        "name" : "Melissa Woolridge",
+        "specialization" : "Ophthalmologist",
+        "address" : "",
+        "yoe" : 10
+    },
+    {
+        "name" : "Harvey Poole",
+        "specialization" : "Orthopedic",
+        "address" : "",
+        "yoe" : 15
+    },
+    {
+        "name" : "Pat Munoz",
+        "specialization" : "General",
+        "address" : "",
+        "yoe" : 25
+    },
+    {
+        "name" : "Melody Sarratt",
+        "specialization" : "Dentist",
+        "address" : "",
+        "yoe" : 30
+    }
+    
+    ]
+}
+
