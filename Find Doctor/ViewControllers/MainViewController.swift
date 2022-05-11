@@ -15,8 +15,18 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         searchBar.searchBarStyle = .minimal
         searchBar.layer.borderColor = UIColor.tintColor.cgColor
-        
         searchBar.delegate = self
+        let db = DoctorCoreDataDB()
+        print("data count ",db.getDataCount())
+        if db.getDataCount() == 0{
+            let doctorInfo = LoadDataFromJSON.loadDoctors("DoctorsData")
+            guard let info = doctorInfo else {
+                return
+            }
+            for i in info{
+                db.createData(i)
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,11 +40,8 @@ class MainViewController: UIViewController {
             sheet.preferredCornerRadius = 50
             sheet.prefersGrabberVisible = true
         }
-        sheetViewController.isModalInPresentation = true
         present(sheetViewController, animated: true)
     }
-
-
 }
 
 extension MainViewController : UISearchBarDelegate {

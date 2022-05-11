@@ -11,8 +11,11 @@
 		BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */; };
 		BD1FE4B0282A3F92003578F6 /* DoctorsData.json in Resources */ = {isa = PBXBuildFile; fileRef = BD1FE4AF282A3F92003578F6 /* DoctorsData.json */; };
 		BD1FE4B4282A4437003578F6 /* SearchResultDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */; };
+		BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */; };
 		BDA99D54282938F900086E9C /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* JsonReader.swift */; };
 		BDA99D5628293C8B00086E9C /* TopDoctorData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDA99D5528293C8B00086E9C /* TopDoctorData.json */; };
+		BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */; };
+		BDC241F2282BB93C003346B9 /* AddNewDoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */; };
 		BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670D2828D6E90004A80B /* AppDelegate.swift */; };
 		BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670F2828D6E90004A80B /* SceneDelegate.swift */; };
 		BDC667122828D6E90004A80B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC667112828D6E90004A80B /* MainViewController.swift */; };
@@ -29,8 +32,11 @@
 		BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCoreDataDB.swift; sourceTree = "<group>"; };
 		BD1FE4AF282A3F92003578F6 /* DoctorsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DoctorsData.json; sourceTree = "<group>"; };
 		BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDisplay.swift; sourceTree = "<group>"; };
+		BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditor.swift; sourceTree = "<group>"; };
 		BDA99D53282938F900086E9C /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		BDA99D5528293C8B00086E9C /* TopDoctorData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopDoctorData.json; sourceTree = "<group>"; };
+		BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditorCell.swift; sourceTree = "<group>"; };
+		BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDoctorInfo.swift; sourceTree = "<group>"; };
 		BDC6670A2828D6E90004A80B /* Find Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Doctor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC6670D2828D6E90004A80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC6670F2828D6E90004A80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 			children = (
 				BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */,
 				BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */,
+				BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -92,10 +99,6 @@
 		BDC667012828D6E90004A80B = {
 			isa = PBXGroup;
 			children = (
-				BD1FE4AC282A35D2003578F6 /* db */,
-				BD1FE4AB282A35C1003578F6 /* UIViews */,
-				BD1FE4A8282A2BBE003578F6 /* DataLoaders */,
-				BDA99D502829381C00086E9C /* Resource */,
 				BDC6670C2828D6E90004A80B /* Find Doctor */,
 				BDC6670B2828D6E90004A80B /* Products */,
 			);
@@ -112,8 +115,12 @@
 		BDC6670C2828D6E90004A80B /* Find Doctor */ = {
 			isa = PBXGroup;
 			children = (
-				BDC667252828D9FF0004A80B /* StoryBoards */,
+				BDA99D502829381C00086E9C /* Resource */,
+				BD1FE4A8282A2BBE003578F6 /* DataLoaders */,
+				BD1FE4AB282A35C1003578F6 /* UIViews */,
 				BDC667242828D9AC0004A80B /* ViewControllers */,
+				BDC667252828D9FF0004A80B /* StoryBoards */,
+				BD1FE4AC282A35D2003578F6 /* db */,
 				BDC6670D2828D6E90004A80B /* AppDelegate.swift */,
 				BDC6670F2828D6E90004A80B /* SceneDelegate.swift */,
 				BDC667192828D6EA0004A80B /* Assets.xcassets */,
@@ -129,6 +136,8 @@
 				BDC667112828D6E90004A80B /* MainViewController.swift */,
 				BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */,
 				BD1FE4B3282A4437003578F6 /* SearchResultDisplay.swift */,
+				BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */,
+				BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,9 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */,
 				BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */,
 				BD1FE4B4282A4437003578F6 /* SearchResultDisplay.swift in Sources */,
 				BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */,
+				BDC241F2282BB93C003346B9 /* AddNewDoctorInfo.swift in Sources */,
 				BDC667122828D6E90004A80B /* MainViewController.swift in Sources */,
 				BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */,
 				BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */,
@@ -225,6 +236,7 @@
 				BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */,
 				BDA99D54282938F900086E9C /* JsonReader.swift in Sources */,
 				BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */,
+				BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

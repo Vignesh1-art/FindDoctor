@@ -16,6 +16,7 @@ struct Doctors : Decodable {
 
 struct Doctor : Decodable {
     var name : String
+    var medicalid : String
     var specialization : String
     var address : String
     var yoe : Int32
