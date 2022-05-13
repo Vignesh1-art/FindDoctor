@@ -74,6 +74,9 @@ class DoctorCoreDataDB {
         fetchRequest.predicate = NSPredicate(format: "medicalid == %@",id)
         do{
             let datas = try managedObject.fetch(fetchRequest) as! [NSManagedObject]
+            if datas.count == 0 {
+                return nil
+            }
             var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0)
             let data = datas[0]
             doctor.name = data.value(forKey: "name") as! String
@@ -81,6 +84,7 @@ class DoctorCoreDataDB {
             doctor.address = data.value(forKey: "address") as! String
             doctor.yoe = data.value(forKey: "yoe") as! Int32
             doctor.specialization = data.value(forKey: "specialization") as! String
+            return doctor
         }
         catch {
             print("error in fetching with medicalid ",error)

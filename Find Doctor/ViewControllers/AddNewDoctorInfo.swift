@@ -15,17 +15,72 @@ class AddNewDoctorInfo : UIViewController{
     @IBOutlet var specialization: UITextField!
     @IBOutlet var address: UITextView!
     
+    override func viewDidLoad() {
+        let width = 1.0
+        medicalID.layer.borderWidth = width
+        doctorsName.layer.borderWidth = width
+        medicalID.layer.borderWidth = width
+        yoe.layer.borderWidth = width
+        specialization.layer.borderWidth = width
+        address.layer.borderWidth = width
+    }
     @IBAction func onClickButton() {
         var doctor : Doctor = Doctor(name: "", medicalid: "", specialization: "", address: "", yoe: 0)
-        doctor.name = doctorsName.text!
-        doctor.medicalid = medicalID.text!
-        doctor.yoe = Int32(yoe.text!)!
-        doctor.specialization = specialization.text!
-        doctor.address = address.text!
+        doctorsName.layer.borderColor = UIColor.white.cgColor
+        medicalID.layer.borderColor =  UIColor.white.cgColor
+        yoe.layer.borderColor =  UIColor.white.cgColor
+        specialization.layer.borderColor =  UIColor.white.cgColor
+        address.layer.borderColor =  UIColor.white.cgColor
+        if let name = doctorsName.text{
+            doctor.name = name
+        }
+        else{
+            doctorsName.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        if let medicalID = medicalID.text {
+            doctor.medicalid = medicalID
+        }
+        else{
+            medicalID.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        if let yoeString = yoe.text {
+            if let yoe = Int32(yoeString) {
+                doctor.yoe = yoe
+            }
+            else{
+                yoe.layer.borderColor = UIColor.red.cgColor
+                return
+            }
+        }
+        else{
+            yoe.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        if let specialization = specialization.text {
+            doctor.specialization = specialization
+        }
+        else{
+            specialization.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        if let address = address.text {
+            doctor.address = address
+        }
+        else {
+            address.layer.borderColor = UIColor.red.cgColor
+            return
+        }
         let db = DoctorCoreDataDB()
-        db.createData(doctor)
-        medicalID.layer.borderColor = UIColor.red.cgColor
-        navigationController?.popViewController(animated: true)
+        let foundDoctor = db.retriveDataWithId(medicalid: doctor.medicalid)
+        if let _ = foundDoctor {
+            medicalID.layer.borderColor = UIColor.red.cgColor
+        }else{
+            db.createData(doctor)
+            navigationController?.popViewController(animated: true)
+        }
+        
     }
     
 }

@@ -9,15 +9,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     let sheetViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sheet")
-    var searchDisplay : SearchResultDisplay?
+    var isSheetViewControllerPresented = false
+    var searchedDoctorInfo : [Doctor] = []
+    let db = DoctorCoreDataDB()
+    @IBOutlet var searchedDoctorInfoDisplay: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.searchBarStyle = .minimal
         searchBar.layer.borderColor = UIColor.tintColor.cgColor
         searchBar.delegate = self
-        let db = DoctorCoreDataDB()
-        print("data count ",db.getDataCount())
+        searchedDoctorInfoDisplay.dataSource = self
         if db.getDataCount() == 0{
             let doctorInfo = LoadDataFromJSON.loadDoctors("DoctorsData")
             guard let info = doctorInfo else {
@@ -28,32 +30,65 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        searchDisplay = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "searchdisplay") as? SearchResultDisplay
+    func presentSheetView() {
+        if isSheetViewControllerPresented || sheetViewController.isBeingDismissed {
+            return
+        }
         if let sheet = sheetViewController.sheetPresentationController{
-            sheet.detents = [.medium(), .large()]
-            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.detents = [.medium(),.large()]
+            sheet.largestUndimmedDetentIdentifier = .large
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
             sheet.preferredCornerRadius = 50
             sheet.prefersGrabberVisible = true
+            sheet.selectedDetentIdentifier = .medium
+            present(sheetViewController, animated: true)
+            isSheetViewControllerPresented = true
         }
-        present(sheetViewController, animated: true)
+    }
+    
+    func dismissSheetView(){
+        if !isSheetViewControllerPresented || sheetViewController.isBeingDismissed {
+            return
+        }
+        sheetViewController.dismiss(animated: true)
+        isSheetViewControllerPresented = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        presentSheetView()
     }
 }
 
 extension MainViewController : UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-        sheetViewController.dismiss(animated: true)
-        guard let searchResult = searchDisplay else{
-            return
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        if let result = db.retriveDataWithFilter(specializationFilter: searchText) {
+            searchedDoctorInfo = result
+            searchedDoctorInfoDisplay.reloadData()
+            if result.count > 0 {
+                dismissSheetView()
+            }
+            else {
+                //else it should be 0
+                presentSheetView()
+            }
         }
-        if let searchText = searchBar.text {
-            searchResult.searchText = searchText
-        }
-        navigationController?.pushViewController(searchResult, animated: true)
     }
+}
+
+extension MainViewController : UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        searchedDoctorInfo.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "doctorinfocell", for: indexPath) as! DoctorInfoCell
+        let doctorInfo = searchedDoctorInfo[indexPath.row]
+        cell.name = doctorInfo.name
+        cell.specialization = doctorInfo.specialization
+        return cell
+    }
+    
+    
 }
