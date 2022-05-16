@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     var isSheetViewControllerPresented = false
     var searchedDoctorInfo : [Doctor] = []
     let db = DoctorCoreDataDB()
+    @IBOutlet var topMainContraint: NSLayoutConstraint!
     @IBOutlet var searchedDoctorInfoDisplay: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
@@ -68,10 +69,12 @@ extension MainViewController : UISearchBarDelegate {
             searchedDoctorInfoDisplay.reloadData()
             if result.count > 0 {
                 dismissSheetView()
+                topMainContraint.constant = 0
             }
             else {
                 //else it should be 0
                 presentSheetView()
+                topMainContraint.constant = 95
             }
         }
     }

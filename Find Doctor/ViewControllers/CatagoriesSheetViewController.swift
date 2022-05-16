@@ -30,8 +30,43 @@ class CatagoriesSheetViewController : UIViewController {
     override func viewDidLoad() {
         bottomStackView.isHidden = true
         mainStackHeightConstraint.constant = 150
-        topDoctors = LoadDataFromJSON.loadTopDoctors("TopDoctorData")!
         topDoctorTableView.dataSource = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let queue = DispatchQueue.global(qos: .userInitiated)
+        queue.async { [weak self] in
+            let onDoctorsDataFetched = {
+                (doctors:[Doctor])->Void in
+                self?.topDoctors = doctors
+                DispatchQueue.main.async {
+                    self?.topDoctorTableView.reloadData()
+                }
+            }
+            
+            while true {
+                do{
+                    try DataLoaderAPI.fetchTopDoctors(onDoctorsDataFetched)
+                    break
+                }
+                catch APIErrors.jsonError {
+                    print("Invalid json recevied from server")
+                    break
+                }
+                catch APIErrors.invalidURL {
+                    print("Invalid url server can't be reached")
+                    break
+                }
+                catch APIErrors.serverUnreachble {
+                    print("Server can't be reached trying again")
+                }
+                catch {
+                    print("unhandled error")
+                    break
+                }
+            }
+        }
     }
     
 }
