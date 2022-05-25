@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 class AddNewDoctorInfo : UIViewController{
     var searchedMedicalID = ""
-    @IBOutlet var medicalID: UITextField!
     @IBOutlet var doctorsName: UITextField!
     @IBOutlet var yoe: UITextField!
     @IBOutlet var specialization: UITextField!
     @IBOutlet var address: UITextView!
+    @IBOutlet var medicalID: TextFieldShake!
     
     override func viewDidLoad() {
         let width = 1.0
@@ -72,12 +72,13 @@ class AddNewDoctorInfo : UIViewController{
             address.layer.borderColor = UIColor.red.cgColor
             return
         }
-        let db = DoctorCoreDataDB()
+        let db = DoctorRealmDB()
         let foundDoctor = db.retriveDataWithId(medicalid: doctor.medicalid)
         if let _ = foundDoctor {
             medicalID.layer.borderColor = UIColor.red.cgColor
         }else{
-            db.createData(doctor)
+            let presistabledata = PersistableDoctorInfo(doctor: doctor, isSynced: false)
+            db.createData(presistabledata)
             navigationController?.popViewController(animated: true)
         }
         

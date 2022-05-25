@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class DoctorCoreDataDB {
+class DoctorCoreDataDB : DoctorDB {
     private var appDelegate : AppDelegate
     private var managedObject : NSManagedObjectContext
     private var enitityDescription : NSEntityDescription
@@ -54,7 +54,7 @@ class DoctorCoreDataDB {
             let datas = try managedObject.fetch(fetchRequest) as! [NSManagedObject]
             var doctors = [Doctor]()
             for data in datas{
-                var doctor : Doctor = Doctor(name: "", medicalid: "" ,specialization: "", address: "", yoe: 0)
+                var doctor : Doctor = Doctor(name: "", medicalid: "" ,specialization: "", address: "", yoe: 0,isSynced: false)
                 doctor.name = data.value(forKey: "name") as! String
                 doctor.address = data.value(forKey: "address") as! String
                 doctor.yoe = data.value(forKey: "yoe") as! Int32
@@ -77,7 +77,7 @@ class DoctorCoreDataDB {
             if datas.count == 0 {
                 return nil
             }
-            var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0)
+            var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0, isSynced: true)
             let data = datas[0]
             doctor.name = data.value(forKey: "name") as! String
             doctor.medicalid = data.value(forKey: "medicalid") as! String
@@ -99,7 +99,7 @@ class DoctorCoreDataDB {
             let datas = try managedObject.fetch(fetchRequest) as! [NSManagedObject]
             var doctors = [Doctor]()
             for data in datas{
-                var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0)
+                var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0,isSynced: false)
                 doctor.name = data.value(forKey: "name") as! String
                 doctor.address = data.value(forKey: "address") as! String
                 doctor.yoe = data.value(forKey: "yoe") as! Int32
@@ -122,7 +122,7 @@ class DoctorCoreDataDB {
             let datas = try managedObject.fetch(fetchRequest) as! [NSManagedObject]
             var doctors = [Doctor]()
             for data in datas{
-                var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0)
+                var doctor : Doctor = Doctor(name: "", medicalid :"", specialization: "", address: "", yoe: 0, isSynced: true)
                 doctor.name = data.value(forKey: "name") as! String
                 doctor.address = data.value(forKey: "address") as! String
                 doctor.yoe = data.value(forKey: "yoe") as! Int32

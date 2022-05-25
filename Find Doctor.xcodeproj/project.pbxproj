@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */; };
-		BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */; };
-		BD1FE4B0282A3F92003578F6 /* DoctorsData.json in Resources */ = {isa = PBXBuildFile; fileRef = BD1FE4AF282A3F92003578F6 /* DoctorsData.json */; };
+		BD489120283B48110058231F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48911F283B48110058231F /* API.swift */; };
 		BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */; };
-		BDA839722832141100FAB45F /* DataLoaderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA839712832141100FAB45F /* DataLoaderAPI.swift */; };
-		BDA99D54282938F900086E9C /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* JsonReader.swift */; };
-		BDA99D5628293C8B00086E9C /* TopDoctorData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDA99D5528293C8B00086E9C /* TopDoctorData.json */; };
+		BD9008AB2834B6910044A1CA /* TextFieldShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9008AA2834B6910044A1CA /* TextFieldShake.swift */; };
+		BDA99D54282938F900086E9C /* DoctorDataStructer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* DoctorDataStructer.swift */; };
 		BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */; };
+		BDBF17CE28336BD100C9A5AA /* DoctorDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */; };
+		BDBF17D128336E1A00C9A5AA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BDBF17D028336E1A00C9A5AA /* Realm */; };
+		BDBF17D328336E1A00C9A5AA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDBF17D228336E1A00C9A5AA /* RealmSwift */; };
+		BDBF17D528336FD100C9A5AA /* DoctorRealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF17D428336FD100C9A5AA /* DoctorRealmDB.swift */; };
+		BDBF17D72833710000C9A5AA /* DoctorRealmSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF17D62833710000C9A5AA /* DoctorRealmSchema.swift */; };
 		BDC241F2282BB93C003346B9 /* AddNewDoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */; };
 		BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670D2828D6E90004A80B /* AppDelegate.swift */; };
 		BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6670F2828D6E90004A80B /* SceneDelegate.swift */; };
@@ -29,13 +32,14 @@
 
 /* Begin PBXFileReference section */
 		BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDoctorsInfoCell.swift; sourceTree = "<group>"; };
-		BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCoreDataDB.swift; sourceTree = "<group>"; };
-		BD1FE4AF282A3F92003578F6 /* DoctorsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DoctorsData.json; sourceTree = "<group>"; };
+		BD48911F283B48110058231F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditor.swift; sourceTree = "<group>"; };
-		BDA839712832141100FAB45F /* DataLoaderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderAPI.swift; sourceTree = "<group>"; };
-		BDA99D53282938F900086E9C /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
-		BDA99D5528293C8B00086E9C /* TopDoctorData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopDoctorData.json; sourceTree = "<group>"; };
+		BD9008AA2834B6910044A1CA /* TextFieldShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldShake.swift; sourceTree = "<group>"; };
+		BDA99D53282938F900086E9C /* DoctorDataStructer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDataStructer.swift; sourceTree = "<group>"; };
 		BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditorCell.swift; sourceTree = "<group>"; };
+		BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDB.swift; sourceTree = "<group>"; };
+		BDBF17D428336FD100C9A5AA /* DoctorRealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRealmDB.swift; sourceTree = "<group>"; };
+		BDBF17D62833710000C9A5AA /* DoctorRealmSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRealmSchema.swift; sourceTree = "<group>"; };
 		BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDoctorInfo.swift; sourceTree = "<group>"; };
 		BDC6670A2828D6E90004A80B /* Find Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Doctor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC6670D2828D6E90004A80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,19 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBF17D328336E1A00C9A5AA /* RealmSwift in Frameworks */,
+				BDBF17D128336E1A00C9A5AA /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD1FE4A8282A2BBE003578F6 /* DataLoaders */ = {
+		BD1FE4A8282A2BBE003578F6 /* DS */ = {
 			isa = PBXGroup;
 			children = (
-				BDA99D53282938F900086E9C /* JsonReader.swift */,
-				BDA839712832141100FAB45F /* DataLoaderAPI.swift */,
+				BDA99D53282938F900086E9C /* DoctorDataStructer.swift */,
 			);
-			path = DataLoaders;
+			path = DS;
 			sourceTree = "<group>";
 		};
 		BD1FE4AB282A35C1003578F6 /* UIViews */ = {
@@ -76,6 +81,7 @@
 				BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */,
 				BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */,
 				BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */,
+				BD9008AA2834B6910044A1CA /* TextFieldShake.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -83,18 +89,19 @@
 		BD1FE4AC282A35D2003578F6 /* db */ = {
 			isa = PBXGroup;
 			children = (
-				BD1FE4AD282A374D003578F6 /* DoctorCoreDataDB.swift */,
+				BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */,
+				BDBF17D428336FD100C9A5AA /* DoctorRealmDB.swift */,
+				BDBF17D62833710000C9A5AA /* DoctorRealmSchema.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
 		};
-		BDA99D502829381C00086E9C /* Resource */ = {
+		BD48911E283B47F90058231F /* api */ = {
 			isa = PBXGroup;
 			children = (
-				BDA99D5528293C8B00086E9C /* TopDoctorData.json */,
-				BD1FE4AF282A3F92003578F6 /* DoctorsData.json */,
+				BD48911F283B48110058231F /* API.swift */,
 			);
-			path = Resource;
+			path = api;
 			sourceTree = "<group>";
 		};
 		BDC667012828D6E90004A80B = {
@@ -116,8 +123,8 @@
 		BDC6670C2828D6E90004A80B /* Find Doctor */ = {
 			isa = PBXGroup;
 			children = (
-				BDA99D502829381C00086E9C /* Resource */,
-				BD1FE4A8282A2BBE003578F6 /* DataLoaders */,
+				BD48911E283B47F90058231F /* api */,
+				BD1FE4A8282A2BBE003578F6 /* DS */,
 				BD1FE4AB282A35C1003578F6 /* UIViews */,
 				BDC667242828D9AC0004A80B /* ViewControllers */,
 				BDC667252828D9FF0004A80B /* StoryBoards */,
@@ -167,6 +174,10 @@
 			dependencies = (
 			);
 			name = "Find Doctor";
+			packageProductDependencies = (
+				BDBF17D028336E1A00C9A5AA /* Realm */,
+				BDBF17D228336E1A00C9A5AA /* RealmSwift */,
+			);
 			productName = "Find Doctor";
 			productReference = BDC6670A2828D6E90004A80B /* Find Doctor.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +206,9 @@
 				Base,
 			);
 			mainGroup = BDC667012828D6E90004A80B;
+			packageReferences = (
+				BDBF17CF28336E1A00C9A5AA /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = BDC6670B2828D6E90004A80B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,9 +225,7 @@
 			files = (
 				BDC6671D2828D6EA0004A80B /* LaunchScreen.storyboard in Resources */,
 				BDC6671A2828D6EA0004A80B /* Assets.xcassets in Resources */,
-				BDA99D5628293C8B00086E9C /* TopDoctorData.json in Resources */,
 				BDC667152828D6E90004A80B /* Main.storyboard in Resources */,
-				BD1FE4B0282A3F92003578F6 /* DoctorsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,18 +237,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */,
-				BDA839722832141100FAB45F /* DataLoaderAPI.swift in Sources */,
+				BDBF17D528336FD100C9A5AA /* DoctorRealmDB.swift in Sources */,
 				BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */,
 				BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */,
+				BD9008AB2834B6910044A1CA /* TextFieldShake.swift in Sources */,
 				BDC241F2282BB93C003346B9 /* AddNewDoctorInfo.swift in Sources */,
 				BDC667122828D6E90004A80B /* MainViewController.swift in Sources */,
 				BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */,
 				BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */,
 				BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */,
-				BD1FE4AE282A374D003578F6 /* DoctorCoreDataDB.swift in Sources */,
-				BDA99D54282938F900086E9C /* JsonReader.swift in Sources */,
+				BDA99D54282938F900086E9C /* DoctorDataStructer.swift in Sources */,
 				BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */,
+				BDBF17CE28336BD100C9A5AA /* DoctorDB.swift in Sources */,
 				BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */,
+				BD489120283B48110058231F /* API.swift in Sources */,
+				BDBF17D72833710000C9A5AA /* DoctorRealmSchema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +469,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDBF17CF28336E1A00C9A5AA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDBF17D028336E1A00C9A5AA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDBF17CF28336E1A00C9A5AA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BDBF17D228336E1A00C9A5AA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDBF17CF28336E1A00C9A5AA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BDC667162828D6E90004A80B /* Find_Doctor.xcdatamodeld */ = {

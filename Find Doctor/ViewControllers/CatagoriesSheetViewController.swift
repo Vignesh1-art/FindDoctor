@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class CatagoriesSheetViewController : UIViewController {
     @IBOutlet var bottomStackView: UIStackView!
@@ -14,6 +15,7 @@ class CatagoriesSheetViewController : UIViewController {
     @IBOutlet var mainStackHeightConstraint: NSLayoutConstraint!
     @IBOutlet var topDoctorTableView: UITableView!
     var topDoctors : [Doctor] = []
+    let api = API(URL: "http://127.0.0.1:5000")
     @IBAction func onClickSeeAll(_ senderButton : UIButton) {
         buttomStackViewHiddenState = !buttomStackViewHiddenState
         if buttomStackViewHiddenState == true {
@@ -31,44 +33,20 @@ class CatagoriesSheetViewController : UIViewController {
         bottomStackView.isHidden = true
         mainStackHeightConstraint.constant = 150
         topDoctorTableView.dataSource = self
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let queue = DispatchQueue.global(qos: .userInitiated)
-        queue.async { [weak self] in
-            let onDoctorsDataFetched = {
-                (doctors:[Doctor])->Void in
-                self?.topDoctors = doctors
-                DispatchQueue.main.async {
-                    self?.topDoctorTableView.reloadData()
-                }
+        let block = {
+            (doctors:[Doctor]?,error:Error?)->Void    in
+            if let doctors = doctors {
+                self.topDoctors = doctors
             }
-            
-            while true {
-                do{
-                    try DataLoaderAPI.fetchTopDoctors(onDoctorsDataFetched)
-                    break
-                }
-                catch APIErrors.jsonError {
-                    print("Invalid json recevied from server")
-                    break
-                }
-                catch APIErrors.invalidURL {
-                    print("Invalid url server can't be reached")
-                    break
-                }
-                catch APIErrors.serverUnreachble {
-                    print("Server can't be reached trying again")
-                }
-                catch {
-                    print("unhandled error")
-                    break
-                }
+            DispatchQueue.main.async {
+                self.topDoctorTableView.reloadData()
             }
         }
+        api.getTopDoctors(onTopDoctorsRecevied: block)
     }
-    
 }
 
 extension CatagoriesSheetViewController : UITableViewDataSource {

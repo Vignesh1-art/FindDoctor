@@ -12,7 +12,7 @@ class DoctorInfoEditor : UIViewController {
     @IBOutlet var doctorInfoEditorTableView: UITableView!
     @IBOutlet var addButton: UIButton!
     var doctorInfo : [Doctor]=[]
-    let db = DoctorCoreDataDB()
+    let db = DoctorRealmDB()
     
     @IBAction func onClickAddButton() {
         let addDoctorInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "adddoctorinfo")
@@ -57,6 +57,4 @@ extension DoctorInfoEditor : UITableViewDataSource{
         cell.medicalID = currentDoctorInfo.medicalid
         return cell
     }
-    
-    
 }

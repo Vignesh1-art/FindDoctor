@@ -11,25 +11,26 @@ class MainViewController: UIViewController {
     let sheetViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sheet")
     var isSheetViewControllerPresented = false
     var searchedDoctorInfo : [Doctor] = []
-    let db = DoctorCoreDataDB()
+    let db = DoctorRealmDB()
     @IBOutlet var topMainContraint: NSLayoutConstraint!
     @IBOutlet var searchedDoctorInfoDisplay: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBAction func onClickPharma(_ sender: UIBarButtonItem) {
+        dismissSheetView()
+        let pharmaViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editdoctorsb")
+        navigationController?.pushViewController(pharmaViewController, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.searchBarStyle = .minimal
         searchBar.layer.borderColor = UIColor.tintColor.cgColor
         searchBar.delegate = self
         searchedDoctorInfoDisplay.dataSource = self
-        if db.getDataCount() == 0{
-            let doctorInfo = LoadDataFromJSON.loadDoctors("DoctorsData")
-            guard let info = doctorInfo else {
-                return
-            }
-            for i in info{
-                db.createData(i)
-            }
-        }
+        let layout = UICollectionViewFlowLayout()
+        let screenWidth = UIScreen.main.bounds.width
+        layout.itemSize = CGSize(width: (screenWidth/2)-15, height: 178)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        searchedDoctorInfoDisplay.collectionViewLayout = layout
     }
     func presentSheetView() {
         if isSheetViewControllerPresented || sheetViewController.isBeingDismissed {
@@ -47,6 +48,7 @@ class MainViewController: UIViewController {
             present(sheetViewController, animated: true)
             isSheetViewControllerPresented = true
         }
+        sheetViewController.isModalInPresentation = true
     }
     
     func dismissSheetView(){
