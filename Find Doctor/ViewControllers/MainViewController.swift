@@ -15,6 +15,10 @@ class MainViewController: UIViewController {
     @IBOutlet var topMainContraint: NSLayoutConstraint!
     @IBOutlet var searchedDoctorInfoDisplay: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
+    
+    @IBAction func onClickBooked(_ sender: UIButton) {
+        sender.setTitle("Booked", for: UIControl.State.normal)
+    }
     @IBAction func onClickPharma(_ sender: UIBarButtonItem) {
         dismissSheetView()
         let pharmaViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "editdoctorsb")

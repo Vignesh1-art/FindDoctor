@@ -13,6 +13,6 @@ protocol DoctorDB{
     func retriveDataWithId(medicalid id:String)->Doctor?
     func retriveDataWithFilter(specializationFilter filter : String)->[Doctor]?
     func retriveDataWithFilter(medicalIdFilter filter : String)->[Doctor]?
-    func updateSyncStatus(medicalid id:String,syncStatus status : Bool)throws
+    func setSyncStatus(medicalid id:String,syncStatus status : Bool)throws
     func getSyncStatus(medicalid id:String)throws->Bool
 }

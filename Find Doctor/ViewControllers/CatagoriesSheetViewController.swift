@@ -16,6 +16,9 @@ class CatagoriesSheetViewController : UIViewController {
     @IBOutlet var topDoctorTableView: UITableView!
     var topDoctors : [Doctor] = []
     let api = API(URL: "http://127.0.0.1:5000")
+    @IBAction func onClickBooked(_ sender: UIButton) {
+        sender.setTitle("Booked", for: UIControl.State.normal)
+    }
     @IBAction func onClickSeeAll(_ senderButton : UIButton) {
         buttomStackViewHiddenState = !buttomStackViewHiddenState
         if buttomStackViewHiddenState == true {
@@ -62,6 +65,5 @@ extension CatagoriesSheetViewController : UITableViewDataSource {
         cell.specialization = topDoctors[index].specialization
         return cell
     }
-    
     
 }

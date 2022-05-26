@@ -10,13 +10,11 @@ import UIKit
 
 class TextFieldShake : UITextField {
     func shake() {
-        let viewToShake = self
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.07
-        animation.repeatCount = 4
-        animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: viewToShake.center.x - 10, y: viewToShake.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint(x: viewToShake.center.x + 10, y: viewToShake.center.y))
-        viewToShake.layer.add(animation, forKey: "position")
+        let animation = CAKeyframeAnimation(keyPath: "position.x")
+        animation.values = [0,10,0,-10,0,10,0]
+        animation.keyTimes = [0,0.14,0.28,0.42,0.56,0.7,0.84]
+        animation.duration = 0.2
+        animation.isAdditive = true
+        self.layer.add(animation, forKey: "1")
     }
 }

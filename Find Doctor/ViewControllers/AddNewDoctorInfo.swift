@@ -23,7 +23,12 @@ class AddNewDoctorInfo : UIViewController{
         yoe.layer.borderWidth = width
         specialization.layer.borderWidth = width
         address.layer.borderWidth = width
+        if searchedMedicalID != "" {
+            medicalID.text = searchedMedicalID
+            medicalID.isEnabled = false
+        }
     }
+    
     @IBAction func onClickButton() {
         var doctor : Doctor = Doctor(name: "", medicalid: "", specialization: "", address: "", yoe: 0)
         doctorsName.layer.borderColor = UIColor.white.cgColor
@@ -76,7 +81,9 @@ class AddNewDoctorInfo : UIViewController{
         let foundDoctor = db.retriveDataWithId(medicalid: doctor.medicalid)
         if let _ = foundDoctor {
             medicalID.layer.borderColor = UIColor.red.cgColor
-        }else{
+            medicalID.shake()
+        }
+        else{
             let presistabledata = PersistableDoctorInfo(doctor: doctor, isSynced: false)
             db.createData(presistabledata)
             navigationController?.popViewController(animated: true)

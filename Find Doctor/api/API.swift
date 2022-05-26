@@ -10,6 +10,7 @@ import Foundation
 class API {
     let urlString:String
     let session = URLSession.shared
+    
     init(URL url:String){
         self.urlString = url
     }
@@ -44,7 +45,7 @@ class API {
         semaphore.wait()
     }
     
-    func syncDoctorInfoWithServer(doctorinfo : Doctor,block:@escaping(String?,Int)->Void){
+    func syncDoctorInfoWithServer(doctorinfo : Doctor,database db:DoctorDB){
         guard let url = URL(string: urlString+"/sync") else {
             return
         }
@@ -63,20 +64,18 @@ class API {
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         let task = session.dataTask(with: urlRequest){
             (data,urlresponse,error) in
-            
-            if let _ = error {
-                block(nil,-1)
-                print("Error while trying to sync with server")
+            guard let urlres = urlresponse as? HTTPURLResponse else {
                 return
             }
-            
-            guard let data = data else {
-                block(nil,-2)
+            let statusCode = urlres.statusCode
+            if statusCode == 400 {
+                print("Already synced")
                 return
             }
-            let response = String(data: data, encoding: String.Encoding.utf8)
-            if let urlres = urlresponse as? HTTPURLResponse {
-                block(response,urlres.statusCode)
+            do {
+                try db.setSyncStatus(medicalid: doctorinfo.medicalid, syncStatus: true)
+            }catch{
+                print("Could not set sync status , medicalid not found in local db")
             }
             semaphore.signal()
         }

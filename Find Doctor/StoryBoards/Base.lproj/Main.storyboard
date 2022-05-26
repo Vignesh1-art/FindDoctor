@@ -71,11 +71,13 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Book"/>
+                                                    <connections>
+                                                        <action selector="onClickBooked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4NJ-Qk-lV5"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ZU6-Bb-GnN" secondAttribute="trailing" constant="60" id="0Ji-HF-hs6"/>
                                                 <constraint firstItem="lSY-NE-tZV" firstAttribute="top" secondItem="qof-Zr-ASi" secondAttribute="bottom" constant="11" id="7w8-xC-NPA"/>
                                                 <constraint firstItem="ZU6-Bb-GnN" firstAttribute="top" secondItem="lSY-NE-tZV" secondAttribute="bottom" constant="7.5" id="E2i-lA-27J"/>
                                                 <constraint firstItem="qof-Zr-ASi" firstAttribute="leading" secondItem="zp2-J1-lat" secondAttribute="leading" constant="5" id="FyR-U5-OQ0"/>
@@ -133,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3831.884057971015" y="124.55357142857142"/>
+            <point key="canvasLocation" x="3923" y="125"/>
         </scene>
         <!--Catagories Sheet View Controller-->
         <scene sceneID="hPK-bi-sou">
@@ -250,6 +252,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Book">
                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="onClickBooked:" destination="AZc-Vg-MIw" eventType="touchUpInside" id="7ba-5H-jga"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -264,7 +269,7 @@
                                                 <constraint firstItem="yhI-t6-WQH" firstAttribute="leading" secondItem="umy-1v-IKI" secondAttribute="leadingMargin" constant="70" id="mTw-Pp-qba"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sp4-yA-Hom" secondAttribute="trailing" constant="20" symbolic="YES" id="qKh-Qa-fpm"/>
                                                 <constraint firstItem="fWa-l2-gYz" firstAttribute="top" secondItem="yhI-t6-WQH" secondAttribute="bottom" constant="4" id="w5B-jl-zQs"/>
-                                                <constraint firstItem="UcD-hC-G9B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fWa-l2-gYz" secondAttribute="trailing" symbolic="YES" id="wY8-NN-seL"/>
+                                                <constraint firstItem="UcD-hC-G9B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fWa-l2-gYz" secondAttribute="trailing" constant="8" symbolic="YES" id="wY8-NN-seL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -357,16 +362,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgY-q7-0dJ">
-                                                    <rect key="frame" x="305" y="31" width="49" height="31"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit">
-                                                        <color key="baseForegroundColor" systemColor="linkColor"/>
-                                                    </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="onClickEdit" destination="xzN-U6-qoI" eventType="touchUpInside" id="4Ll-g0-Uj9"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Med ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTN-SC-hkv">
                                                     <rect key="frame" x="89" y="23" width="49" height="18"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -377,12 +372,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="x6k-Pb-h2H" firstAttribute="top" secondItem="dTN-SC-hkv" secondAttribute="bottom" constant="8" symbolic="YES" id="4p2-mI-cw4"/>
-                                                <constraint firstItem="fgY-q7-0dJ" firstAttribute="top" secondItem="qhN-dt-Xs2" secondAttribute="topMargin" constant="20" id="5t9-Si-DH2"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fgY-q7-0dJ" secondAttribute="trailing" constant="20" id="76m-Kp-11s"/>
                                                 <constraint firstItem="dTN-SC-hkv" firstAttribute="leading" secondItem="qhN-dt-Xs2" secondAttribute="leadingMargin" constant="69" id="BhY-Kt-Uq8"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fgY-q7-0dJ" secondAttribute="bottom" constant="20" id="Kaj-lr-IuU"/>
                                                 <constraint firstItem="dTN-SC-hkv" firstAttribute="top" secondItem="qhN-dt-Xs2" secondAttribute="topMargin" constant="12" id="Sx1-zP-jMf"/>
-                                                <constraint firstItem="fgY-q7-0dJ" firstAttribute="leading" secondItem="dTN-SC-hkv" secondAttribute="trailing" constant="167" id="ocM-fx-scX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x6k-Pb-h2H" secondAttribute="bottom" constant="12" id="s3P-21-zJb"/>
                                                 <constraint firstItem="x6k-Pb-h2H" firstAttribute="leading" secondItem="qhN-dt-Xs2" secondAttribute="leadingMargin" constant="69" id="wpX-k7-daT"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -549,9 +541,6 @@
         <image name="skindoctor" width="306.5" height="258"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

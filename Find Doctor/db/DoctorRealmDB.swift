@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 
 enum RealmDB : Error{
-    case primaryKeyAlreadyFoundError
+    case primaryKeyAlreadyFound
+    case notFound
 }
 
 class DoctorRealmDB : DoctorDB{
@@ -88,7 +89,7 @@ class DoctorRealmDB : DoctorDB{
         }
         return docs
     }
-    func updateSyncStatus(medicalid id:String,syncStatus status : Bool ) throws {
+    func setSyncStatus(medicalid id:String,syncStatus status : Bool ) throws {
         let doctor = realmdb?.object(ofType: DoctorRealmSchema.self, forPrimaryKey: id)
         if let doctor = doctor {
             try! realmdb?.write{
@@ -96,13 +97,13 @@ class DoctorRealmDB : DoctorDB{
             }
             return
         }
-        throw RealmDB.primaryKeyAlreadyFoundError
+        throw RealmDB.notFound
     }
     func getSyncStatus(medicalid id:String)throws ->Bool  {
         let doctor = realmdb?.object(ofType: DoctorRealmSchema.self, forPrimaryKey: id)
         if let doctor = doctor {
             return doctor.isSynced
         }
-        throw RealmDB.primaryKeyAlreadyFoundError
+        throw RealmDB.notFound
     }
 }
