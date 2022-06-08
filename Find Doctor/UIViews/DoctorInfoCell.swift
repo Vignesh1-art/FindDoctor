@@ -10,6 +10,7 @@ import UIKit
 class DoctorInfoCell : UICollectionViewCell {
     @IBOutlet var nameDisplay: UILabel!
     @IBOutlet var specializationDisplay: UILabel!
+    @IBOutlet var doctorProfile: UIImageView!
     
     var name : String {
         set {

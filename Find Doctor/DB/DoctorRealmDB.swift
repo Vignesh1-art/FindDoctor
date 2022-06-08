@@ -8,8 +8,9 @@
 import Foundation
 import RealmSwift
 
-enum RealmDB : Error{
+enum RealmDBError : Error{
     case primaryKeyAlreadyFound
+    case primaryKeynotFound
     case notFound
 }
 
@@ -23,15 +24,35 @@ class DoctorRealmDB : DoctorDB{
             print("Realm unable to initialize")
         }
     }
-    func createData(_ docInfo : PersistableDoctorInfo) {
+    
+    func createData(_ docInfo : PersistableDoctorInfo) throws {
         guard let db = realmdb else {
             return
         }
+        if let _ = db.object(ofType: DoctorRealmSchema.self,forPrimaryKey: docInfo.medicalid){
+            throw RealmDBError.primaryKeyAlreadyFound
+        }
+        
         try! db.write{
             let doctorInfo = DoctorRealmSchema(doctor: docInfo)
             db.add(doctorInfo)
         }
     }
+    
+    func deleteData(medicalID id : String) throws {
+        guard let db = realmdb else {
+            return
+        }
+        if let doctorData = db.object(ofType: DoctorRealmSchema.self,forPrimaryKey: id){
+            try db.write{
+                db.delete(doctorData)
+            }
+        }
+        else{
+            throw RealmDBError.primaryKeynotFound
+        }
+    }
+    
     func getDataCount()->Int {
         guard let db = realmdb else {
             return 0
@@ -48,7 +69,6 @@ class DoctorRealmDB : DoctorDB{
         for d in data {
             doctor.append(d.doctorObject)
         }
-        
         return doctor
     }
     
@@ -89,6 +109,7 @@ class DoctorRealmDB : DoctorDB{
         }
         return docs
     }
+    
     func setSyncStatus(medicalid id:String,syncStatus status : Bool ) throws {
         let doctor = realmdb?.object(ofType: DoctorRealmSchema.self, forPrimaryKey: id)
         if let doctor = doctor {
@@ -97,13 +118,14 @@ class DoctorRealmDB : DoctorDB{
             }
             return
         }
-        throw RealmDB.notFound
+        throw RealmDBError.notFound
     }
+    
     func getSyncStatus(medicalid id:String)throws ->Bool  {
         let doctor = realmdb?.object(ofType: DoctorRealmSchema.self, forPrimaryKey: id)
         if let doctor = doctor {
             return doctor.isSynced
         }
-        throw RealmDB.notFound
+        throw RealmDBError.notFound
     }
 }

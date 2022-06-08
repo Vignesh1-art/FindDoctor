@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */; };
 		BD489120283B48110058231F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48911F283B48110058231F /* API.swift */; };
+		BD4AF1FC2844A5A900C31E01 /* Find_DoctorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */; };
+		BD4AF2032844A5D100C31E01 /* DoctorDatabaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */; };
+		BD4AF2052844A66B00C31E01 /* doctordummydata.json in Resources */ = {isa = PBXBuildFile; fileRef = BD4AF2042844A66B00C31E01 /* doctordummydata.json */; };
 		BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */; };
 		BD9008AB2834B6910044A1CA /* TextFieldShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9008AA2834B6910044A1CA /* TextFieldShake.swift */; };
-		BDA99D54282938F900086E9C /* DoctorDataStructer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* DoctorDataStructer.swift */; };
+		BDA99D54282938F900086E9C /* DoctorDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA99D53282938F900086E9C /* DoctorDataStructure.swift */; };
 		BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */; };
 		BDBF17CE28336BD100C9A5AA /* DoctorDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */; };
 		BDBF17D128336E1A00C9A5AA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BDBF17D028336E1A00C9A5AA /* Realm */; };
@@ -27,15 +30,40 @@
 		BDC6671A2828D6EA0004A80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC667192828D6EA0004A80B /* Assets.xcassets */; };
 		BDC6671D2828D6EA0004A80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC6671B2828D6EA0004A80B /* LaunchScreen.storyboard */; };
 		BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */; };
+		BDC9E6D92845D33400E81B8B /* Find_DoctorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC9E6D82845D33400E81B8B /* Find_DoctorUITests.swift */; };
+		BDC9E6DB2845D33500E81B8B /* Find_DoctorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC9E6DA2845D33400E81B8B /* Find_DoctorUITestsLaunchTests.swift */; };
 		BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */; };
+		BDFF44BE2844D406002C122D /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF44BD2844D406002C122D /* APITest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD4AF1FD2844A5A900C31E01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDC667022828D6E90004A80B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDC667092828D6E90004A80B;
+			remoteInfo = "Find Doctor";
+		};
+		BDC9E6DC2845D33500E81B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDC667022828D6E90004A80B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDC667092828D6E90004A80B;
+			remoteInfo = "Find Doctor";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDoctorsInfoCell.swift; sourceTree = "<group>"; };
+		BD2A3E862845DE9400E88832 /* FindDoctorTestplan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindDoctorTestplan.xctestplan; sourceTree = "<group>"; };
 		BD48911F283B48110058231F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BD4AF1F92844A5A900C31E01 /* Find DoctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find DoctorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorTests.swift; sourceTree = "<group>"; };
+		BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDatabaseTest.swift; sourceTree = "<group>"; };
+		BD4AF2042844A66B00C31E01 /* doctordummydata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = doctordummydata.json; sourceTree = "<group>"; };
 		BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditor.swift; sourceTree = "<group>"; };
 		BD9008AA2834B6910044A1CA /* TextFieldShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldShake.swift; sourceTree = "<group>"; };
-		BDA99D53282938F900086E9C /* DoctorDataStructer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDataStructer.swift; sourceTree = "<group>"; };
+		BDA99D53282938F900086E9C /* DoctorDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDataStructure.swift; sourceTree = "<group>"; };
 		BDB5AD6B282B95A80078A74F /* DoctorInfoEditorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditorCell.swift; sourceTree = "<group>"; };
 		BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDB.swift; sourceTree = "<group>"; };
 		BDBF17D428336FD100C9A5AA /* DoctorRealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRealmDB.swift; sourceTree = "<group>"; };
@@ -51,10 +79,21 @@
 		BDC6671C2828D6EA0004A80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC6671E2828D6EA0004A80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesSheetViewController.swift; sourceTree = "<group>"; };
+		BDC9E6D62845D33400E81B8B /* Find DoctorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find DoctorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC9E6D82845D33400E81B8B /* Find_DoctorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorUITests.swift; sourceTree = "<group>"; };
+		BDC9E6DA2845D33400E81B8B /* Find_DoctorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoCell.swift; sourceTree = "<group>"; };
+		BDFF44BD2844D406002C122D /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD4AF1F62844A5A900C31E01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC667072828D6E90004A80B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,13 +103,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC9E6D32845D33400E81B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BD1FE4A8282A2BBE003578F6 /* DS */ = {
 			isa = PBXGroup;
 			children = (
-				BDA99D53282938F900086E9C /* DoctorDataStructer.swift */,
+				BDA99D53282938F900086E9C /* DoctorDataStructure.swift */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -86,28 +132,42 @@
 			path = UIViews;
 			sourceTree = "<group>";
 		};
-		BD1FE4AC282A35D2003578F6 /* db */ = {
+		BD1FE4AC282A35D2003578F6 /* DB */ = {
 			isa = PBXGroup;
 			children = (
 				BDBF17CD28336BD100C9A5AA /* DoctorDB.swift */,
 				BDBF17D428336FD100C9A5AA /* DoctorRealmDB.swift */,
 				BDBF17D62833710000C9A5AA /* DoctorRealmSchema.swift */,
 			);
-			path = db;
+			path = DB;
 			sourceTree = "<group>";
 		};
-		BD48911E283B47F90058231F /* api */ = {
+		BD48911E283B47F90058231F /* API */ = {
 			isa = PBXGroup;
 			children = (
 				BD48911F283B48110058231F /* API.swift */,
 			);
-			path = api;
+			path = API;
+			sourceTree = "<group>";
+		};
+		BD4AF1FA2844A5A900C31E01 /* Find DoctorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */,
+				BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */,
+				BD4AF2042844A66B00C31E01 /* doctordummydata.json */,
+				BDFF44BD2844D406002C122D /* APITest.swift */,
+				BD2A3E862845DE9400E88832 /* FindDoctorTestplan.xctestplan */,
+			);
+			path = "Find DoctorTests";
 			sourceTree = "<group>";
 		};
 		BDC667012828D6E90004A80B = {
 			isa = PBXGroup;
 			children = (
 				BDC6670C2828D6E90004A80B /* Find Doctor */,
+				BD4AF1FA2844A5A900C31E01 /* Find DoctorTests */,
+				BDC9E6D72845D33400E81B8B /* Find DoctorUITests */,
 				BDC6670B2828D6E90004A80B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				BDC6670A2828D6E90004A80B /* Find Doctor.app */,
+				BD4AF1F92844A5A900C31E01 /* Find DoctorTests.xctest */,
+				BDC9E6D62845D33400E81B8B /* Find DoctorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,12 +185,12 @@
 		BDC6670C2828D6E90004A80B /* Find Doctor */ = {
 			isa = PBXGroup;
 			children = (
-				BD48911E283B47F90058231F /* api */,
+				BD48911E283B47F90058231F /* API */,
 				BD1FE4A8282A2BBE003578F6 /* DS */,
 				BD1FE4AB282A35C1003578F6 /* UIViews */,
 				BDC667242828D9AC0004A80B /* ViewControllers */,
 				BDC667252828D9FF0004A80B /* StoryBoards */,
-				BD1FE4AC282A35D2003578F6 /* db */,
+				BD1FE4AC282A35D2003578F6 /* DB */,
 				BDC6670D2828D6E90004A80B /* AppDelegate.swift */,
 				BDC6670F2828D6E90004A80B /* SceneDelegate.swift */,
 				BDC667192828D6EA0004A80B /* Assets.xcassets */,
@@ -158,9 +220,36 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		BDC9E6D72845D33400E81B8B /* Find DoctorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDC9E6D82845D33400E81B8B /* Find_DoctorUITests.swift */,
+				BDC9E6DA2845D33400E81B8B /* Find_DoctorUITestsLaunchTests.swift */,
+			);
+			path = "Find DoctorUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BD4AF1F82844A5A900C31E01 /* Find DoctorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD4AF2012844A5A900C31E01 /* Build configuration list for PBXNativeTarget "Find DoctorTests" */;
+			buildPhases = (
+				BD4AF1F52844A5A900C31E01 /* Sources */,
+				BD4AF1F62844A5A900C31E01 /* Frameworks */,
+				BD4AF1F72844A5A900C31E01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD4AF1FE2844A5A900C31E01 /* PBXTargetDependency */,
+			);
+			name = "Find DoctorTests";
+			productName = "Find DoctorTests";
+			productReference = BD4AF1F92844A5A900C31E01 /* Find DoctorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BDC667092828D6E90004A80B /* Find Doctor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDC667212828D6EA0004A80B /* Build configuration list for PBXNativeTarget "Find Doctor" */;
@@ -182,6 +271,24 @@
 			productReference = BDC6670A2828D6E90004A80B /* Find Doctor.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BDC9E6D52845D33400E81B8B /* Find DoctorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC9E6E02845D33500E81B8B /* Build configuration list for PBXNativeTarget "Find DoctorUITests" */;
+			buildPhases = (
+				BDC9E6D22845D33400E81B8B /* Sources */,
+				BDC9E6D32845D33400E81B8B /* Frameworks */,
+				BDC9E6D42845D33400E81B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDC9E6DD2845D33500E81B8B /* PBXTargetDependency */,
+			);
+			name = "Find DoctorUITests";
+			productName = "Find DoctorUITests";
+			productReference = BDC9E6D62845D33400E81B8B /* Find DoctorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,11 +296,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					BD4AF1F82844A5A900C31E01 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = BDC667092828D6E90004A80B;
+					};
 					BDC667092828D6E90004A80B = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					BDC9E6D52845D33400E81B8B = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = BDC667092828D6E90004A80B;
 					};
 				};
 			};
@@ -214,11 +329,21 @@
 			projectRoot = "";
 			targets = (
 				BDC667092828D6E90004A80B /* Find Doctor */,
+				BD4AF1F82844A5A900C31E01 /* Find DoctorTests */,
+				BDC9E6D52845D33400E81B8B /* Find DoctorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD4AF1F72844A5A900C31E01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4AF2052844A66B00C31E01 /* doctordummydata.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC667082828D6E90004A80B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,9 +354,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC9E6D42845D33400E81B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD4AF1F52844A5A900C31E01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4AF1FC2844A5A900C31E01 /* Find_DoctorTests.swift in Sources */,
+				BD4AF2032844A5D100C31E01 /* DoctorDatabaseTest.swift in Sources */,
+				BDFF44BE2844D406002C122D /* APITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC667062828D6E90004A80B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,7 +388,7 @@
 				BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */,
 				BDC6670E2828D6E90004A80B /* AppDelegate.swift in Sources */,
 				BDC667102828D6E90004A80B /* SceneDelegate.swift in Sources */,
-				BDA99D54282938F900086E9C /* DoctorDataStructer.swift in Sources */,
+				BDA99D54282938F900086E9C /* DoctorDataStructure.swift in Sources */,
 				BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */,
 				BDBF17CE28336BD100C9A5AA /* DoctorDB.swift in Sources */,
 				BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */,
@@ -255,7 +397,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC9E6D22845D33400E81B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC9E6DB2845D33500E81B8B /* Find_DoctorUITestsLaunchTests.swift in Sources */,
+				BDC9E6D92845D33400E81B8B /* Find_DoctorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD4AF1FE2844A5A900C31E01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDC667092828D6E90004A80B /* Find Doctor */;
+			targetProxy = BD4AF1FD2844A5A900C31E01 /* PBXContainerItemProxy */;
+		};
+		BDC9E6DD2845D33500E81B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDC667092828D6E90004A80B /* Find Doctor */;
+			targetProxy = BDC9E6DC2845D33500E81B8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BDC667132828D6E90004A80B /* Main.storyboard */ = {
@@ -277,6 +441,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BD4AF1FF2844A5A900C31E01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-DoctorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find Doctor.app/Find Doctor";
+			};
+			name = Debug;
+		};
+		BD4AF2002844A5A900C31E01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-DoctorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find Doctor.app/Find Doctor";
+			};
+			name = Release;
+		};
 		BDC6671F2828D6EA0004A80B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,9 +649,54 @@
 			};
 			name = Release;
 		};
+		BDC9E6DE2845D33500E81B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-DoctorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Find Doctor";
+			};
+			name = Debug;
+		};
+		BDC9E6DF2845D33500E81B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XVUKQGSK4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cardinalhealth.Find-DoctorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Find Doctor";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD4AF2012844A5A900C31E01 /* Build configuration list for PBXNativeTarget "Find DoctorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4AF1FF2844A5A900C31E01 /* Debug */,
+				BD4AF2002844A5A900C31E01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BDC667052828D6E90004A80B /* Build configuration list for PBXProject "Find Doctor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -464,6 +711,15 @@
 			buildConfigurations = (
 				BDC667222828D6EA0004A80B /* Debug */,
 				BDC667232828D6EA0004A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDC9E6E02845D33500E81B8B /* Build configuration list for PBXNativeTarget "Find DoctorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC9E6DE2845D33500E81B8B /* Debug */,
+				BDC9E6DF2845D33500E81B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -85,7 +85,7 @@ class AddNewDoctorInfo : UIViewController{
         }
         else{
             let presistabledata = PersistableDoctorInfo(doctor: doctor, isSynced: false)
-            db.createData(presistabledata)
+            try! db.createData(presistabledata)
             navigationController?.popViewController(animated: true)
         }
         

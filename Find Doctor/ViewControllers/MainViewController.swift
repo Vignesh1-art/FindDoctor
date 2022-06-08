@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var topMainContraint: NSLayoutConstraint!
     @IBOutlet var searchedDoctorInfoDisplay: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
-    
+    let api = API(URL: "http://127.0.0.1:5000")
     @IBAction func onClickBooked(_ sender: UIButton) {
         sender.setTitle("Booked", for: UIControl.State.normal)
     }
@@ -96,6 +96,7 @@ extension MainViewController : UICollectionViewDataSource{
         let doctorInfo = searchedDoctorInfo[indexPath.row]
         cell.name = doctorInfo.name
         cell.specialization = doctorInfo.specialization
+        //cell.doctorProfile.image = image
         return cell
     }
     

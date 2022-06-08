@@ -1,0 +1,31 @@
+[
+    {
+        "name" : "dummy1",
+        "medicalid" : "dummyid1",
+        "specialization" : "dummyspltn1",
+        "address" : "dummyaddress1",
+        "yoe" : 35
+    },
+    {
+        "name" : "dummy2",
+        "medicalid" : "dummyid2",
+        "specialization" : "dummyspltn2",
+        "address" : "dummyaddress2",
+        "yoe" : 36
+    },
+    {
+        "name" : "dummy3",
+        "medicalid" : "dummyid3",
+        "specialization" : "dummyspltn3",
+        "address" : "dummyaddress3",
+        "yoe" : 37
+    },
+    {
+        "name" : "dummy4",
+        "medicalid" : "dummyid4",
+        "specialization" : "dummyspltn4",
+        "address" : "dummyaddress4",
+        "yoe" : 38
+    }
+]
+

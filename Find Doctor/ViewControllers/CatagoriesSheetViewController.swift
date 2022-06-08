@@ -16,6 +16,7 @@ class CatagoriesSheetViewController : UIViewController {
     @IBOutlet var topDoctorTableView: UITableView!
     var topDoctors : [Doctor] = []
     let api = API(URL: "http://127.0.0.1:5000")
+    var image:UIImage?
     @IBAction func onClickBooked(_ sender: UIButton) {
         sender.setTitle("Booked", for: UIControl.State.normal)
     }
@@ -59,10 +60,15 @@ extension CatagoriesSheetViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topdoctorinfocell") as! TopDoctorsInfoCell
+        cell.nameDisplay.accessibilityIdentifier = "name"
         let index = indexPath.row
         cell.name = topDoctors[index].name
         cell.yoe = topDoctors[index].yoe
         cell.specialization = topDoctors[index].specialization
+        let profilePic = api.downloadImage(topDoctors[index].medicalid)
+        if let profilePic = profilePic {
+            cell.doctorProfilePic = profilePic
+        }
         return cell
     }
     

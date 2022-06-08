@@ -24,7 +24,7 @@ class DoctorInfoEditor : UIViewController {
     override func viewDidLoad() {
         searchBar.delegate = self
         doctorInfoEditorTableView.dataSource = self
-        addButton.isEnabled = false
+        addButton.isEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

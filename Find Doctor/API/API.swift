@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class API {
     let urlString:String
@@ -111,8 +112,29 @@ class API {
         if let doctors = doctors {
             for doctor in doctors {
                 let data = PersistableDoctorInfo(doctor: doctor, isSynced: true)
-                db.createData(data)
+                try! db.createData(data)
             }
         }
+    }
+    func downloadImage(_ medicalid:String)->UIImage? {
+        guard let url = URL(string: urlString+"/downloadimage?medicalid="+medicalid) else {
+            return nil
+        }
+        var image:UIImage?
+        let semaphore = DispatchSemaphore(value: 0)
+        let onComplete = {
+            (data:Data?,urlresponse:URLResponse?,error:Error?)->Void in
+            if let _ = error {
+                return
+            }
+            if let data = data {
+                image = UIImage(data: data)
+            }
+            semaphore.signal()
+        }
+        let task = session.dataTask(with: url, completionHandler: onComplete)
+        task.resume()
+        semaphore.wait()
+        return image
     }
 }

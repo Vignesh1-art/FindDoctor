@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F759E6DE-FB28-4591-8823-8277169F5141",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Find Doctor.xcodeproj",
+        "identifier" : "BD4AF1F82844A5A900C31E01",
+        "name" : "Find DoctorTests"
+      }
+    }
+  ],
+  "version" : 1
+}

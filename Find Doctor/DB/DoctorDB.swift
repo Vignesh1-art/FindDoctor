@@ -7,7 +7,8 @@
 
 import Foundation
 protocol DoctorDB{
-    func createData(_ docInfo : PersistableDoctorInfo)
+    func createData(_ docInfo : PersistableDoctorInfo) throws
+    func deleteData(medicalID id : String) throws
     func getDataCount()->Int
     func retriveAllData()->[Doctor]?
     func retriveDataWithId(medicalid id:String)->Doctor?
@@ -15,4 +16,5 @@ protocol DoctorDB{
     func retriveDataWithFilter(medicalIdFilter filter : String)->[Doctor]?
     func setSyncStatus(medicalid id:String,syncStatus status : Bool)throws
     func getSyncStatus(medicalid id:String)throws->Bool
+    
 }
