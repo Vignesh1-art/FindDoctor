@@ -16,5 +16,4 @@ protocol DoctorDB{
     func retriveDataWithFilter(medicalIdFilter filter : String)->[Doctor]?
     func setSyncStatus(medicalid id:String,syncStatus status : Bool)throws
     func getSyncStatus(medicalid id:String)throws->Bool
-    
 }

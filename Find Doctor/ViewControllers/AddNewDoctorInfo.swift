@@ -14,7 +14,8 @@ class AddNewDoctorInfo : UIViewController{
     @IBOutlet var specialization: UITextField!
     @IBOutlet var address: UITextView!
     @IBOutlet var medicalID: TextFieldShake!
-    
+    @IBOutlet var doctorProfilePic: UIImageView!
+    let api = API(URL: "http://127.0.0.1:5000")
     override func viewDidLoad() {
         let width = 1.0
         medicalID.layer.borderWidth = width
@@ -27,6 +28,13 @@ class AddNewDoctorInfo : UIViewController{
             medicalID.text = searchedMedicalID
             medicalID.isEnabled = false
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
     @IBAction func onClickButton() {
@@ -86,9 +94,19 @@ class AddNewDoctorInfo : UIViewController{
         else{
             let presistabledata = PersistableDoctorInfo(doctor: doctor, isSynced: false)
             try! db.createData(presistabledata)
+            api.syncDoctorInfoWithServer(doctorinfo: doctor, database: db)
+            api.uploadImage(doctorProfilePic.image!, medicalID.text!)
             navigationController?.popViewController(animated: true)
         }
         
     }
     
+}
+
+extension AddNewDoctorInfo : UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        doctorProfilePic.image = image
+        dismiss(animated: true)
+    }
 }

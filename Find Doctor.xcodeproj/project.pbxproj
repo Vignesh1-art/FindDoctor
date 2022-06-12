@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BD1FE4AA282A2CF2003578F6 /* TopDoctorsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FE4A9282A2CF2003578F6 /* TopDoctorsInfoCell.swift */; };
 		BD489120283B48110058231F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48911F283B48110058231F /* API.swift */; };
-		BD4AF1FC2844A5A900C31E01 /* Find_DoctorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */; };
 		BD4AF2032844A5D100C31E01 /* DoctorDatabaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */; };
 		BD4AF2052844A66B00C31E01 /* doctordummydata.json in Resources */ = {isa = PBXBuildFile; fileRef = BD4AF2042844A66B00C31E01 /* doctordummydata.json */; };
 		BD6E3253282B90C200C284FC /* DoctorInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */; };
@@ -58,7 +57,6 @@
 		BD2A3E862845DE9400E88832 /* FindDoctorTestplan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindDoctorTestplan.xctestplan; sourceTree = "<group>"; };
 		BD48911F283B48110058231F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BD4AF1F92844A5A900C31E01 /* Find DoctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find DoctorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorTests.swift; sourceTree = "<group>"; };
 		BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDatabaseTest.swift; sourceTree = "<group>"; };
 		BD4AF2042844A66B00C31E01 /* doctordummydata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = doctordummydata.json; sourceTree = "<group>"; };
 		BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoEditor.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		BD4AF1FA2844A5A900C31E01 /* Find DoctorTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD4AF1FB2844A5A900C31E01 /* Find_DoctorTests.swift */,
 				BD4AF2022844A5D100C31E01 /* DoctorDatabaseTest.swift */,
 				BD4AF2042844A66B00C31E01 /* doctordummydata.json */,
 				BDFF44BD2844D406002C122D /* APITest.swift */,
@@ -368,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4AF1FC2844A5A900C31E01 /* Find_DoctorTests.swift in Sources */,
 				BD4AF2032844A5D100C31E01 /* DoctorDatabaseTest.swift in Sources */,
 				BDFF44BE2844D406002C122D /* APITest.swift in Sources */,
 			);

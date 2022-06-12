@@ -73,15 +73,15 @@ class API {
                 print("Already synced")
                 return
             }
-            do {
-                try db.setSyncStatus(medicalid: doctorinfo.medicalid, syncStatus: true)
-            }catch{
-                print("Could not set sync status , medicalid not found in local db")
-            }
             semaphore.signal()
         }
         task.resume()
         semaphore.wait()
+        do {
+            try db.setSyncStatus(medicalid: doctorinfo.medicalid, syncStatus: true)
+        }catch{
+            print("Could not set sync status , medicalid not found in local db")
+        }
     }
     func downloadAllDoctorInfo(db:DoctorDB){
         guard let url = URL(string: urlString+"/download") else {
@@ -125,6 +125,7 @@ class API {
         let onComplete = {
             (data:Data?,urlresponse:URLResponse?,error:Error?)->Void in
             if let _ = error {
+                image = nil
                 return
             }
             if let data = data {
@@ -136,5 +137,34 @@ class API {
         task.resume()
         semaphore.wait()
         return image
+    }
+    func uploadImage(_ image : UIImage,_ medicalid:String){
+        guard let url = URL(string: urlString+"/upload") else {
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("multipart/form-data; boundary=12345", forHTTPHeaderField: "Content-Type")
+        request.setValue("text/plain", forHTTPHeaderField: "Accept")
+        var httpBody:Data=Data()
+        httpBody.append("\r\n--12345".data(using: .utf8)!)
+        httpBody.append("\r\nContent-Disposition: form-data; name=\"f1\"\r\n".data(using: .utf8)!)
+        httpBody.append("Content-Type: text/plain\r\n\r\n".data(using: .utf8)!)
+        httpBody.append("value".data(using: .utf8)!)
+        httpBody.append("\r\n--12345".data(using: .utf8)!)
+        httpBody.append("\r\nContent-Disposition: form-data; name=\"image\"; filename=\"\(medicalid).png\"\r\n".data(using: .utf8)!)
+        httpBody.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        httpBody.append(image.pngData()!)
+        httpBody.append("\r\n--12345--".data(using: .utf8)!)
+        request.httpBody = httpBody
+        let onComplete = {
+            (data:Data?,urlresponse:URLResponse?,error:Error?)->Void in
+            //do nothing
+            if let _ = error {
+                print("Error occured")
+            }
+        }
+        let task = session.dataTask(with: request, completionHandler: onComplete)
+        task.resume()
     }
 }

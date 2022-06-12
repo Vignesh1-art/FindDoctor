@@ -30,4 +30,13 @@ class DoctorInfoCell : UICollectionViewCell {
         }
     }
     
+    var doctorProfilePic : UIImage!{
+        set {
+            doctorProfile.image = newValue
+        }
+        get{
+            return doctorProfile.image!
+        }
+    }
+    
 }

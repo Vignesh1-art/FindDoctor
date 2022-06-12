@@ -18,8 +18,8 @@ class APITest: XCTestCase {
         
     }
     
-    func testImageDownloader() {
-        api.downloadImage("1111")
+    func testUploadImage(){
+        api.uploadImage()
     }
     
     

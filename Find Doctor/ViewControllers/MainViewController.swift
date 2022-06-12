@@ -35,6 +35,9 @@ class MainViewController: UIViewController {
         layout.itemSize = CGSize(width: (screenWidth/2)-15, height: 178)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         searchedDoctorInfoDisplay.collectionViewLayout = layout
+        if db.getDataCount()==0{
+            api.downloadAllDoctorInfo(db: db)
+        }
     }
     func presentSheetView() {
         if isSheetViewControllerPresented || sheetViewController.isBeingDismissed {
@@ -88,7 +91,7 @@ extension MainViewController : UISearchBarDelegate {
 
 extension MainViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        searchedDoctorInfo.count
+        return searchedDoctorInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -96,7 +99,10 @@ extension MainViewController : UICollectionViewDataSource{
         let doctorInfo = searchedDoctorInfo[indexPath.row]
         cell.name = doctorInfo.name
         cell.specialization = doctorInfo.specialization
-        //cell.doctorProfile.image = image
+        let doctorProfilePic = api.downloadImage(doctorInfo.medicalid)
+        if let pic = doctorProfilePic {
+            cell.doctorProfilePic = pic
+        }
         return cell
     }
     
