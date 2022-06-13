@@ -18,9 +18,5 @@ class APITest: XCTestCase {
         
     }
     
-    func testUploadImage(){
-        api.uploadImage()
-    }
-    
     
 }

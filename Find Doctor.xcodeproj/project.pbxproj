@@ -31,6 +31,7 @@
 		BDC667272828F8490004A80B /* CatagoriesSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */; };
 		BDC9E6D92845D33400E81B8B /* Find_DoctorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC9E6D82845D33400E81B8B /* Find_DoctorUITests.swift */; };
 		BDC9E6DB2845D33500E81B8B /* Find_DoctorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC9E6DA2845D33400E81B8B /* Find_DoctorUITestsLaunchTests.swift */; };
+		BDE7B63728559CB200165424 /* BookDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7B63628559CB200165424 /* BookDoctorViewController.swift */; };
 		BDEFE964282A465500F1E2C2 /* DoctorInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */; };
 		BDFF44BE2844D406002C122D /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF44BD2844D406002C122D /* APITest.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		BDC9E6D62845D33400E81B8B /* Find DoctorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find DoctorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC9E6D82845D33400E81B8B /* Find_DoctorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorUITests.swift; sourceTree = "<group>"; };
 		BDC9E6DA2845D33400E81B8B /* Find_DoctorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_DoctorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDE7B63628559CB200165424 /* BookDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDoctorViewController.swift; sourceTree = "<group>"; };
 		BDEFE963282A465500F1E2C2 /* DoctorInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoCell.swift; sourceTree = "<group>"; };
 		BDFF44BD2844D406002C122D /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 				BDC667262828F8480004A80B /* CatagoriesSheetViewController.swift */,
 				BD6E3252282B90C200C284FC /* DoctorInfoEditor.swift */,
 				BDC241F1282BB93C003346B9 /* AddNewDoctorInfo.swift */,
+				BDE7B63628559CB200165424 /* BookDoctorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				BDA99D54282938F900086E9C /* DoctorDataStructure.swift in Sources */,
 				BDC667182828D6E90004A80B /* Find_Doctor.xcdatamodeld in Sources */,
 				BDBF17CE28336BD100C9A5AA /* DoctorDB.swift in Sources */,
+				BDE7B63728559CB200165424 /* BookDoctorViewController.swift in Sources */,
 				BDB5AD6C282B95A80078A74F /* DoctorInfoEditorCell.swift in Sources */,
 				BD489120283B48110058231F /* API.swift in Sources */,
 				BDBF17D72833710000C9A5AA /* DoctorRealmSchema.swift in Sources */,

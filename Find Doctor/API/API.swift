@@ -16,26 +16,24 @@ class API {
         self.urlString = url
     }
     
-    func getTopDoctors(onTopDoctorsRecevied block:@escaping([Doctor]?,Error?)->Void){
+    func getTopDoctors()->[Doctor]?{
         guard let url = URL(string: urlString+"/topdoctors") else {
-            return
+            return nil
         }
+        var doctors : [Doctor]?
         let semaphore = DispatchSemaphore(value: 0)
         let onComplete = {
             (data:Data?,urlresponse:URLResponse?,error:Error?)->Void in
-            if let error = error {
-                block(nil, error)
+            if let _ = error {
                 return
             }
             if let data = data {
                 let decoder = JSONDecoder()
                 do{
-                    let doctors = try decoder.decode([Doctor].self, from: data)
-                    block(doctors,nil)
+                    doctors = try decoder.decode([Doctor].self, from: data)
                 }
                 catch{
                     print("Json error")
-                    block(nil,error)
                 }
                 
             }
@@ -44,6 +42,7 @@ class API {
         let task = session.dataTask(with: url, completionHandler: onComplete)
         task.resume()
         semaphore.wait()
+        return doctors
     }
     
     func syncDoctorInfoWithServer(doctorinfo : Doctor,database db:DoctorDB){

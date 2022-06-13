@@ -17,6 +17,10 @@ class CatagoriesSheetViewController : UIViewController {
     var topDoctors : [Doctor] = []
     let api = API(URL: "http://127.0.0.1:5000")
     var image:UIImage?
+    @IBOutlet var dentistCatagoryImage: UIImageView!
+    @IBOutlet var eyeCatagoryImage: UIImageView!
+    @IBOutlet var cardiologistCatagoryImage: UIImageView!
+    @IBOutlet var skinCatagoryImage: UIImageView!
     @IBAction func onClickBooked(_ sender: UIButton) {
         sender.setTitle("Booked", for: UIControl.State.normal)
     }
@@ -37,19 +41,84 @@ class CatagoriesSheetViewController : UIViewController {
         bottomStackView.isHidden = true
         mainStackHeightConstraint.constant = 150
         topDoctorTableView.dataSource = self
+        
+        let tapDentistImage = UITapGestureRecognizer(target: self, action: #selector(onTapDentistCatagoryImage(tapGestureRecognizer:)))
+        dentistCatagoryImage.isUserInteractionEnabled = true
+        dentistCatagoryImage.addGestureRecognizer(tapDentistImage)
+        
+        let tapEyeImage = UITapGestureRecognizer(target: self, action: #selector(onTapEyeCatagoryImage(tapGestureRecognizer:)))
+        eyeCatagoryImage.isUserInteractionEnabled = true
+        eyeCatagoryImage.addGestureRecognizer(tapEyeImage)
+        
+        let tapCardiologistImage = UITapGestureRecognizer(target: self, action: #selector(onTapCardiologistCatagoryImage(tapGestureRecognizer:)))
+        cardiologistCatagoryImage.isUserInteractionEnabled = true
+        cardiologistCatagoryImage.addGestureRecognizer(tapCardiologistImage)
+        
+        let tapSkinImage = UITapGestureRecognizer(target: self, action: #selector(onTapSkinCatagoryImage(tapGestureRecognizer:)))
+        skinCatagoryImage.isUserInteractionEnabled = true
+        skinCatagoryImage.addGestureRecognizer(tapSkinImage)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let block = {
-            (doctors:[Doctor]?,error:Error?)->Void    in
-            if let doctors = doctors {
-                self.topDoctors = doctors
-            }
-            DispatchQueue.main.async {
-                self.topDoctorTableView.reloadData()
+        if let doctors = api.getTopDoctors() {
+            topDoctors = doctors
+            topDoctorTableView.reloadData()
+        }
+        else{
+            print("Unable to load top doctors")
+        }
+    }
+    
+    @objc func onTapDentistCatagoryImage(tapGestureRecognizer: UITapGestureRecognizer){
+        guard let allTopDoctors = api.getTopDoctors() else {
+            return
+        }
+        topDoctors.removeAll()
+        for doctor in allTopDoctors {
+            if doctor.specialization == "Dentist"{
+                topDoctors.append(doctor)
             }
         }
-        api.getTopDoctors(onTopDoctorsRecevied: block)
+        topDoctorTableView.reloadData()
+    }
+    
+    @objc func onTapEyeCatagoryImage(tapGestureRecognizer: UITapGestureRecognizer){
+        guard let allTopDoctors = api.getTopDoctors() else {
+            return
+        }
+        topDoctors.removeAll()
+        for doctor in allTopDoctors {
+            if doctor.specialization == "Ophthalmologist"{
+                topDoctors.append(doctor)
+            }
+        }
+        topDoctorTableView.reloadData()
+    }
+    
+    @objc func onTapCardiologistCatagoryImage(tapGestureRecognizer: UITapGestureRecognizer){
+        guard let allTopDoctors = api.getTopDoctors() else {
+            return
+        }
+        topDoctors.removeAll()
+        for doctor in allTopDoctors {
+            if doctor.specialization == "Cardiologists"{
+                topDoctors.append(doctor)
+            }
+        }
+        topDoctorTableView.reloadData()
+    }
+    
+    @objc func onTapSkinCatagoryImage(tapGestureRecognizer: UITapGestureRecognizer){
+        guard let allTopDoctors = api.getTopDoctors() else {
+            return
+        }
+        topDoctors.removeAll()
+        for doctor in allTopDoctors {
+            if doctor.specialization == "Dermatologist"{
+                topDoctors.append(doctor)
+            }
+        }
+        topDoctorTableView.reloadData()
     }
 }
 

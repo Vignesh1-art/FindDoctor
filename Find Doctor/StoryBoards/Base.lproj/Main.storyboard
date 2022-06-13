@@ -39,8 +39,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-8t-ERO">
                                 <rect key="frame" x="0.0" y="368" width="414" height="528"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BTN-FM-STN">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BTN-FM-STN">
                                     <size key="itemSize" width="203" height="230"/>
+                                    <size key="estimatedItemSize" width="203" height="230"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -337,7 +338,11 @@
                     <navigationItem key="navigationItem" id="8gm-y3-465"/>
                     <connections>
                         <outlet property="bottomStackView" destination="eFu-ei-hVk" id="Kh8-gp-MYY"/>
+                        <outlet property="cardiologistCatagoryImage" destination="gxW-Hj-xbt" id="akj-ql-8W1"/>
+                        <outlet property="dentistCatagoryImage" destination="8M2-66-A9h" id="tFE-1M-T2H"/>
+                        <outlet property="eyeCatagoryImage" destination="UYx-NO-Chx" id="wRg-Nx-py2"/>
                         <outlet property="mainStackHeightConstraint" destination="50p-z8-cY2" id="7Qq-b7-gSk"/>
+                        <outlet property="skinCatagoryImage" destination="gxW-Hj-xbt" id="aZT-U6-g1Y"/>
                         <outlet property="topDoctorTableView" destination="aTO-mO-96k" id="JXY-xa-yni"/>
                     </connections>
                 </viewController>
